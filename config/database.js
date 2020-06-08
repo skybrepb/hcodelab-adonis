@@ -66,10 +66,11 @@ module.exports = {
       // user: Env.get('DB_USER', CLEARDB_DATABASE_URL.username),
       // password: Env.get('DB_PASSWORD', CLEARDB_DATABASE_URL.password),
       // database: Env.get('DB_DATABASE', CLEARDB_DATABASE_URL.pathname.substr(1))
-      host: "us-cdbr-east-05.cleardb.net",
-      user: "b5412e08d8468d",
-      password: "9479261d",
-      database: "heroku_0be97d671790a17"
+      host: "hcodelab.ctxqflv0u769.us-east-2.rds.amazonaws.com",
+      port: "3306",
+      user: "admin",
+      password: "toc1toc2",
+      database: "ferrari"
       },
     debug: Env.get('DB_DEBUG', false)
   },
