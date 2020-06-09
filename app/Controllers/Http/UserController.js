@@ -2,8 +2,8 @@
 
 const User = use('App/Models/User')
 const Helpers = use('Helpers')
-//const fs = use('fs')
-//const readFile = Helpers.promisify(fs.readfile)
+const fs = use('fs')
+const readFile = Helpers.promisify(fs.readFile)
 const uploadDir = 'uploads'
 
 class UserController {
@@ -73,9 +73,12 @@ class UserController {
         }
 
         user.photo = `${uploadDir}/${name}`
+        
         await user.save()
+        
         return user
     }
+
     //Carrega a foto do usuário
     async photo({params, response}) {
 
