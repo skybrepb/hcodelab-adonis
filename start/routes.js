@@ -28,6 +28,8 @@ Route.post('/users', 'userController.store') // Cadastra Usuário
 // Route.delete('/admin/users/:id', 'UserController.destroy').middleware('auth') //deleta usuário
 // Route.post('/admin/users', 'UserController.store') // Cadastra Usuários
 
+Route.post('/admin/users/:id/uploads', 'UserController.ChangePhoto')
+Route.post('/admin/users/:id/photo', 'UserController.photo')
 
 Route.group(()=> {
   Route.resource('users','UserController').apiOnly()
